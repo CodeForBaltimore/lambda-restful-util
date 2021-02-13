@@ -11,7 +11,7 @@ A simple package to offer some quick wins for API devs!
     - [Using the headerParser or bodyParser](#using-the-headerparser-or-bodyparser)
     - [Using the withStatusCode function](#using-the-withstatuscode-function)
   - [Testing](#testing)
-  - [Contributors ✨](#contributors-)
+- [Contributors ✨](#contributors-)
 
 <!-- /TOC -->
 
@@ -44,7 +44,7 @@ To use this package in your work simply run `npm install lambda-restful-util` or
 
 Run `yarn test`
 
-## Contributors ✨
+# Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
