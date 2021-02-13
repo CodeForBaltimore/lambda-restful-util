@@ -3,6 +3,7 @@ node_modules/
 built/*
 dist/
 .env
+.nyc_output
 tests/cases/rwc/*
 tests/cases/test262/*
 tests/cases/perf/*
