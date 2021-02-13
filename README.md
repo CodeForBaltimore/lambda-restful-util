@@ -10,7 +10,7 @@ A simple package to offer some quick wins for API devs!
   - [Documentation](#documentation)
 - [Setup](#setup)
   - [Using this product](#using-this-product)
-    - [Using the headerParser or bodyParser](#using-the-headerparser-or-bodyparser)
+    - [Using the validateAndParseRequestHeaders or validateAndParseRequestBody](#using-the-validateandparserequestheaders-or-validateandparserequestbody)
     - [Using the withStatusCode function](#using-the-withstatuscode-function)
   - [Testing](#testing)
 - [Contributors ✨](#contributors-)
@@ -34,13 +34,59 @@ Additionally this project uses yarn instead of npm. Please ensure you have yarn 
 
 To use this package in your work simply run `npm install lambda-restful-util` or `yarn add lambda-restful-util` then include it in your code as with any other dependency. 
 
-### Using the `headerParser` or `bodyParser`
+### Using the `validateAndParseRequestHeaders` or `validateAndParseRequestBody`
 
-<add to this eventually>
+Both the `validateAndParseRequestHeaders` and `validateAndParseRequestBody` operate very similarly. Simply pass the `event` from API Gateway and both return a truthy object you can use if they're valid. For example:
+
+```
+exports.handler = async (event: APIGatewayProxyEvent) => {
+  const requestHeaders = utils.validateAndParseRequestHeaders(event)
+  const requestBody = utils.validateAndParseRequestBody(event)
+
+  if (requestHeaders.Authorization && requestBody) {
+    const token = requestHeaders.Authorization.replace('Bearer ', '')
+    ...
+  }
+  ...
+}
+```
 
 ### Using the `withStatusCode` function
 
-<add to this>
+To use the `withStatusCode` you only _need_ to specify the response code and the request origin (for CORS). An example of a simple 200 response is as follows:
+
+```
+import util from 'lambda-restful-util'
+...
+const ok = util.withStatusCode(200, 'http://localhost:8080')
+
+exports.handler = async (event: APIGatewayProxyEvent) => {
+  ...
+  return ok('Hey Buddy!')
+}
+```
+
+For convenience this package includes every HTTP response for reference. To use the `HttpStatusCode` enum you can modify the above example by modifying the var: `const ok = util.withStatusCode(util.HttpStatusCode.OK, 'http://localhost:8080)`.
+
+#### Adding a formatter
+
+In addition to the `HttpStatusCode` you can pass a formatting function as an optional argument to `withStatusCode`. To add `JSON.stringify` simply modify the var again: `const ok = util.withStatusCode(util.HttpStatusCode.OK, 'http://localhost:8080, JSON.stringify)`.
+
+If you know your response is going to be JSON this will simplify converting your Object to JSON. For example:
+
+```
+...
+const ok = util.withStatusCode(util.HttpStatusCode.OK, 'http://localhost:8080, JSON.stringify)
+...
+const res = {
+  name: 'Homer Simpson'
+  employer: 'Springfield Power Plant'
+}
+...
+return ok(res)
+```
+
+The above will correctly return a JSON string as the 200 HTTP response to your API request. Consequently if you send `return ok('test')` that _will also_ return a JSON 200 response. If you **do not** want to return JSON simply don't pass a formatting argument when declaring the `ok` response.
 
 ## Testing
 
