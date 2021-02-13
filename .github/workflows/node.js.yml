@@ -29,13 +29,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-        
+
     - name: Install yarn
       run: npm i -g yarn
     - name: Install dependencies
       run: yarn install
     - name: Run the tests
-      run: yarn test
+      run: yarn test && yarn report
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
       with:
