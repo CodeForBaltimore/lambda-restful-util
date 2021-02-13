@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/CodeForBaltimore/lambda-restful-util/branch/master/graph/badge.svg?token=287I7OIYA5)](https://codecov.io/gh/CodeForBaltimore/lambda-restful-util)
+
 # Lambda RESTful Utility
 A simple package to offer some quick wins for API devs!  
 
