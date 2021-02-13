@@ -53,6 +53,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://www.jasonanton.com/"><img src="https://avatars.githubusercontent.com/u/6391564?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jason Anton</b></sub></a><br /><a href="https://github.com/CodeForBaltimore/lambda-restful-util/commits?author=revjtanton" title="Code">💻</a> <a href="https://github.com/CodeForBaltimore/lambda-restful-util/commits?author=revjtanton" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/suryayelagam"><img src="https://avatars.githubusercontent.com/u/17008332?v=4?s=100" width="100px;" alt=""/><br /><sub><b>suryayelagam</b></sub></a><br /><a href="https://github.com/CodeForBaltimore/lambda-restful-util/pulls?q=is%3Apr+reviewed-by%3Asuryayelagam" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
