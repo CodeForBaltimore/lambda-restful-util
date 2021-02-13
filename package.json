@@ -1,0 +1,42 @@
+{
+  "name": "lambda-restful-util",
+  "version": "1.0.0",
+  "description": "A lightweight utility for Lambda API development",
+  "repository": "git@github.com:CodeForBaltimore/lambda-restful-util.git",
+  "author": "Jason Anton <rev.jt.anton@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "test": "NODE_ENV=test nyc mocha -r ts-node/register \"src/**/*.spec.ts\" --exit"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.72",
+    "@types/chai": "4.2.15",
+    "@types/mocha": "8.2.0",
+    "@types/node": "14.14.27",
+    "@typescript-eslint/eslint-plugin": "4.15.0",
+    "@typescript-eslint/parser": "4.15.0",
+    "chai": "4.3.0",
+    "eslint": "7.20.0",
+    "eslint-plugin-mocha": "8.0.0",
+    "mocha": "8.3.0",
+    "nyc": "15.1.0",
+    "ts-node": "9.1.1",
+    "typescript": "4.1.5"
+  },
+  "dependencies": {
+    "aws-lambda": "1.0.6"
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "src/**/*.spec.ts"
+    ]
+  }
+}

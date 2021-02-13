@@ -7,32 +7,17 @@ Please note we have a [CODE OF CONDUCT](/docs/Code_of_Conduct.md), please follow
 
 ## Overview
 
-In this section you should provide a semi-detailed overview of your project. This overview should include a statement of the
-problem you're looking to solve, maybe some bullet points, and a statement defining the solution.
+This project aims to offer simple utilities for API development on AWS Lambda. Some of these utilities may work for other frameworks like Express, however this is just a happy coincidence. 
 
 ### Non Goals
 
-This should be a list of bullets of related features you are not planning to add to the project. This should be adjusted based
-on the maturity of the product. 
-
-### Minimum Viable Product
-
-As with the _Non Goals_ this should be a bulleted list of features you will include in your product. This list can be adjusted 
-based on the maturity of the product.
-
-### Roadmap
-
-Provide an esitmate of when work will be completed, or a link to any kanban boards you may have.
+This product does not aim to offer everything needed for RESTful development on AWS Lambda, just a jump-start. We are getting the low hanging fruit to speed up development, nothing more.
 
 ## Technology and Code
 
-Provide a bulleted list of your applicable tech stack. Below is the standard sentence to link to the Best_Practices doc. You can also link
-to the Tech_Spec.
+This is an npm package so it's Typescript/Javascript.
 
-Please update the [Tech Spec](/docs/Tech_Spec.md) with a full breakdown of the project and workflows then link it here.
-
-Please update the [Best Practices](/docs/Best_Practices.md) with code standards, git standards, and other guidance for writing clean and well 
-documented code then link it here.
+Please see [Best Practices](/docs/Best_Practices.md) for Typescript coding standards.
 
 ### Pull Request Process
 
@@ -52,6 +37,3 @@ The best ways to get in touch with us is via Slack. An active Slack link can be 
 ***[codeforbaltimore.org](https://codeforbaltimore.org/)***
 
 You can also reach out to the tech lead [Jason Anton](https://github.com/revjtanton) via email at [jason@codeforbaltimore.org](mailto:jason@codeforbaltimore.org).
-
-## Sources and Links
-Provide any relevant links here.
