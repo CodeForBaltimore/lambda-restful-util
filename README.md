@@ -12,6 +12,7 @@ A simple package to offer some quick wins for API devs!
   - [Using this product](#using-this-product)
     - [Using the validateAndParseRequestHeaders or validateAndParseRequestBody](#using-the-validateandparserequestheaders-or-validateandparserequestbody)
     - [Using the withStatusCode function](#using-the-withstatuscode-function)
+      - [Adding a formatter](#adding-a-formatter)
   - [Testing](#testing)
 - [Contributors ✨](#contributors-)
 
