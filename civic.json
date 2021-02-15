@@ -3,11 +3,11 @@
     "thumbnailUrl": "https://codeforbaltimore.org/icon.png",
     "geography": "Greater Baltimore, MD",
     "politicalEntity":"",
-    "type": "API",
+    "type": "UTIL",
     "needs": [
             {"need": "Typescript Dev"}
     ],
     "categories": [
-            {"category": "Example"}
+            {"category": "Utility"}
     ]
 }
