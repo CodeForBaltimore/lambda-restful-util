@@ -1,12 +1,16 @@
 {
   "name": "lambda-restful-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight utility for Lambda API development",
   "repository": "git@github.com:CodeForBaltimore/lambda-restful-util.git",
   "author": "Jason Anton <rev.jt.anton@gmail.com>",
   "license": "MIT",
   "private": false,
   "main": "dist/index.js",
+  "typings": "dist/index",
+  "files": [
+    "dist/"
+  ],
   "source": "src/index.ts",
   "scripts": {
     "build": "tsc -p .",
