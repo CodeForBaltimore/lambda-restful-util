@@ -1,6 +1,6 @@
 {
   "name": "lambda-restful-util",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A lightweight utility for Lambda API development",
   "repository": "git@github.com:CodeForBaltimore/lambda-restful-util.git",
   "author": "Jason Anton <rev.jt.anton@gmail.com>",
