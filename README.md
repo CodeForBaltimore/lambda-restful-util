@@ -54,16 +54,16 @@ exports.handler = async (event: APIGatewayProxyEvent) => {
 
 ### Using the `withStatusCode` function
 
-To use the `withStatusCode` you only _need_ to specify the response code and the request origin (for CORS). An example of a simple 200 response is as follows:
+To use the `withStatusCode` you only _need_ to specify the response code when declaring the type of response. It is recommended to pass an approved origin for the request if applicable when calling that function. An example of a simple 200 response is as follows:
 
 ```
 import util from 'lambda-restful-util'
 ...
-const ok = util.withStatusCode(200, 'http://localhost:8080')
+const ok = util.withStatusCode(200)
 
 exports.handler = async (event: APIGatewayProxyEvent) => {
   ...
-  return ok('Hey Buddy!')
+  return ok('Hey Buddy!', 'http://localhost:8080')
 }
 ```
 
@@ -77,7 +77,7 @@ If you know your response is going to be JSON this will simplify converting your
 
 ```
 ...
-const ok = util.withStatusCode(util.HttpStatusCode.OK, 'http://localhost:8080, JSON.stringify)
+const ok = util.withStatusCode(util.HttpStatusCode.OK, JSON.stringify)
 ...
 const res = {
   name: 'Homer Simpson'
